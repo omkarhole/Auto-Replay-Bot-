@@ -18,7 +18,7 @@ client = OpenAI(
   api_key="",
 )
 
-def is_last_message_from_sender(chat_log, sender_name="+91 93117 77385"):
+def is_last_message_from_sender(chat_log, sender_name="<sender name>"):
     # Split the chat log into individual messages
     messages = chat_log.strip().split("/2024] ")[-1]
     if sender_name in messages:
@@ -52,8 +52,7 @@ while True:
         completion = client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[
-            {"role": "system", "content": "You are a person named Naruto who speaks hindi as well as english. You are from India and you are a coder. You analyze chat history and roast people in a funny way. Output should be the next chat response (text message only)"},
-            {"role": "system", "content": "Do not start like this [21:02, 12/6/2024] Rohan Das: "},
+            {"role": "system", "content": "<prompt to train your ai>"},
             {"role": "user", "content": chat_history}
         ]
         )
