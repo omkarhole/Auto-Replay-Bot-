@@ -1,13 +1,18 @@
 
 
-
+    
 import pyautogui
 import time
 import pyperclip
-from openai import OpenAI
+from openai import OpenAI# imp# Additional commented code removed for security
+# import pyperclip  # for accessing clipboard
+# from openai import OpenAI
+# import os
 
-
-
+# # Initialize the client with your API key
+# client = OpenAI(
+#     api_key=os.getenv("OPENAI_API_KEY")  # Use environment variable for security
+# )
 
 client = OpenAI(
   api_key="",
@@ -83,7 +88,7 @@ while True:
 
 # # Initialize the client with your API key
 # client = OpenAI(
-#     api_key="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"  # ⚠️ keep secret, don’t hardcode in public code
+#     api_key="api key"  # ⚠️ keep secret, don’t hardcode in public code
 # )
 
 # # Small delay to give you time to switch to the correct screen
